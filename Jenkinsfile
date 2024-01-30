@@ -33,7 +33,7 @@ pipeline{
                         }else{
                             echo "Executing tag: ${params.TAG}"
                             bat "npm run test-${ENV} --tags=${TAG}"
-                            sh "npm run cucumber-report"
+                            bat "npm run cucumber-report"
                         }
                     }finally{
                         publishReport();
