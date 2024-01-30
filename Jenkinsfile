@@ -29,10 +29,26 @@ pipeline{
                         if(isUnix()){
                             echo "Executing tag: ${params.TAG} "
                             sh "npm run test-${ENV} --tags=${TAG}"
-                            sh "npm run cucumber-report"
                         }else{
                             echo "Executing tag: ${params.TAG}"
                             bat "npm run test-${ENV} --tags=${TAG}"
+                        }
+                    }catch(e){
+                        println "error: ${e}";
+                    }
+                    
+                }
+            }
+        }
+        stage('Report'){
+            steps{
+                script{
+                    try{
+                        if(isUnix()){
+                            sh "npm run cucumber-report"
+                            sh "npm i cucumber-html-reporter"
+                        }else{
+                            bat "npm i cucumber-html-reporter"
                             bat "npm run cucumber-report"
                         }
                     }finally{
