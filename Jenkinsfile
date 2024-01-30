@@ -46,7 +46,7 @@ pipeline{
     def publishReport(){
         publishHTML(target:[
             reportName:'Cucumber Report',
-            reportDir:  '/test-results/reports/',
+            reportDir:  'C:\Users\Usuario\Documents\pipeline\playwright-training-scotia 2\playwright-training-scotia\test-results\reports',
             reportFiles:'cucumber_report.html',
             keepAll:true,
             alwaysLinkToLastBuild:true,
