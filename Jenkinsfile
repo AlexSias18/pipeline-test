@@ -51,8 +51,8 @@ pipeline{
             reportDir:  'C:/Users/Usuario/Documents/pipeline/playwright-training-scotia 2/playwright-training-scotia/test-results/reports/',
             reportFiles:'cucumber-report.html',
             keepAll:true,
-            alwaysLinkToLastBuild:false,
-            allowMissing:true
+            alwaysLinkToLastBuild:true,
+            allowMissing:false
         ])
 
     }
