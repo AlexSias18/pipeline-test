@@ -1,4 +1,5 @@
-Feature: Login Saucdemo
+@prueba-pipeline
+Feature: Login Saucedemo
 
     @login
     Scenario: Login exitoso Saucedemo
