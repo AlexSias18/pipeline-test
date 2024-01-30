@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test-dev": "cross-env ENV=dev BROWSER=chrome cucumber-js --config=config/cucumber.js",
-    "test-uat": "cross-env ENV=uat BROWSER=chrome cucumber-js --config=config/cucumber.js",
+    "test-uat": "node ./config/removeReports.js & cross-env ENV=uat BROWSER=chrome cucumber-js --config=config/cucumber.js",
+    "cucumber-report": "node config/htmlReportGenerator.js --format @cucumber/pretty-formatter",
     "test-firefox": "cross-env ENV=dev BROWSER=firefox cucumber-js --config=config/cucumber.js",
     "test-webkit": "cross-env ENV=dev BROWSER=webkit cucumber-js --config=config/cucumber.js",
     "posttest-dev": "npx ts-node src/helper/report.ts"
@@ -21,5 +22,8 @@
     "dotenv": "^16.3.1",
     "multiple-cucumber-html-reporter": "^3.5.0",
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "cucumber-html-reporter": "^7.1.1"
   }
 }
