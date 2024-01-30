@@ -23,7 +23,7 @@ pipeline{
             }
         }
         stage('Execute Test'){
-            teps{
+            steps{
                 script{
                     try{
                         if(isUnix()){
