@@ -16,3 +16,7 @@ When('inicio sesión con mis credenciales usuario {string} y password {string}',
 Then('el inicio de sesión es satisfactorio', async function () {
     await productsPage.isVisible();
 });
+
+Then('el inicio de sesión es fallido', async function () {
+    await productsPage.loginFailed();
+});

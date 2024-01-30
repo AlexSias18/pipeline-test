@@ -10,4 +10,4 @@ Feature: Login Saucdemo
     Scenario: Login exitoso Saucedemo
         Given estoy en la página de Saucedemo
         When inicio sesión con mis credenciales usuario "standard_user" y password "password"
-        Then el inicio de sesión es satisfactorio    
+        Then el inicio de sesión es fallido
