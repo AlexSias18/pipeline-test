@@ -5,8 +5,8 @@ pipeline{
 
     }
     parameters{
-        choice(name:'ENV', choices['dev','uat'],description: 'Seleccionar ambiente')
-        string(name:'TAG', trim:false, description: 'Tag a ejecutar')
+        choice(name: 'ENV', choices['dev','uat'], description: 'Seleccionar ambiente')
+        string(name: 'TAG', trim:false, description: 'Tag a ejecutar')
     }
     stages{
         stage('Build'){
