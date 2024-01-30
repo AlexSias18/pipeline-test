@@ -33,10 +33,9 @@ pipeline{
                             echo "Executing tag: ${params.TAG}"
                             bat "npm run test-${ENV} --tags=${TAG}"
                         }
-                    }catch(e){
-                        println "error: ${e}";
-                    }
-                    
+                    }finally{
+                         publishReport();
+                     }
                 }
             }
         }
