@@ -64,7 +64,7 @@ pipeline{
     def publishReport(){
         publishHTML(target:[
             reportName:'Cucumber Report',
-            reportDir:  'C:/Users/Usuario/Documents/pipeline/playwright-training-scotia 2/playwright-training-scotia/test-results/reports/',
+            reportDir:  'C:\ProgramData\Jenkins\.jenkins\workspace\test-pipeline/test-results/reports/',
             reportFiles:'cucumber-report.html',
             keepAll:true,
             alwaysLinkToLastBuild:true,
