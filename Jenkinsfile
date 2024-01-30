@@ -47,7 +47,7 @@ pipeline{
         publishHTML(target:[
             reportName:'Cucumber Report',
             reportDir:  'C:/Users/Usuario/Documents/pipeline/playwright-training-scotia 2/playwright-training-scotia/test-results/reports/',
-            reportFiles:'cucumber-report.html',
+            reportFiles:'index.html',
             keepAll:true,
             alwaysLinkToLastBuild:false,
             allowMissing:true
