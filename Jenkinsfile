@@ -40,24 +40,24 @@ pipeline{
                 }
             }
         }
-        stage('Report'){
-            steps{
-                script{
-                    try{
-                        if(isUnix()){
-                            sh "npm run cucumber-report"
-                            sh "npm i cucumber-html-reporter"
-                        }else{
-                            bat "npm i cucumber-html-reporter"
-                            bat "npm run cucumber-report"
-                        }
-                    }finally{
-                        publishReport();
-                    }
+        // stage('Report'){
+        //     steps{
+        //         script{
+        //             try{
+        //                 if(isUnix()){
+        //                     sh "npm run cucumber-report"
+        //                     sh "npm i cucumber-html-reporter"
+        //                 }else{
+        //                     bat "npm i cucumber-html-reporter"
+        //                     bat "npm run cucumber-report"
+        //                 }
+        //             }finally{
+        //                 publishReport();
+        //             }
                     
-                }
-            }
-        }
+        //         }
+        //     }
+        // }
     }
 }
 
