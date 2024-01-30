@@ -49,7 +49,8 @@ pipeline{
             reportFiles:'cucumber-report.html',
             keepAll:true,
             alwaysLinkToLastBuild:true,
-            allowMissing:false
+            allowMissing:false,
+            reportTitles : "Reporte de prueba Pipeline"
         ])
 
     }
